@@ -1,0 +1,51 @@
+{% extends 'jobs_app/base.html' %} 
+{% block body_content %}
+{% load static %}
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}
+            <div class="links">
+                <!-- Example row of columns -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <!--<img src="{% static "images/Marketplace.png" %}" alt="marketplace"/>-->
+                            <div class="caption">
+                                <a href="{% url 'jobs_app:jobs_list'%}">
+                                <h2>Job Vacancies</h2></a>
+                                <p>Hiring the correct Candidates for the position is the ultimate Goal </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <!-- <img src="{% static "images/Candidate.jpg" %}" alt="candidates"/>-->
+                            <div class="caption">
+                                
+                                <a href="{% url 'jobs_app:candidate_list'%}"><h2>Candidates</h2></a>
+                                <p>Actively looking for a job.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="thumbnail">
+                            <!-- <img src="{% static "images/skillstraining.jpg" %}" alt="lunch"/> -->
+                            <div class="caption">
+                                <a href="{% url 'jobs_app:jobs_list'%}"><h2>Skill Training</h2></a>
+                                <p>Providing High quality Training</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+{% endblock body_content %}
